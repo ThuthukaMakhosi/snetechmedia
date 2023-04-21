@@ -1,0 +1,178 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Artists</title>
+</head>
+<header class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a href="{% url 'snetech:home' %}"><img src="/static/images/logoONE.png" alt="Logo" class="logo"></a>
+              </div>
+
+                <div class="collapse navbar-collapse" id="micon">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'snetech:home' %}">Home</a></li>
+                    <li><a href="{% url 'snetech:artists' %}">Our Artists</a></li>
+                    <li><a href="{% url 'snetech:gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'snetech:contact' %}">Contact Us</a></li>
+
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'user_auth:logout' %}">Logout</a></li>
+
+                    {% else %}
+                        <li><a href="{% url 'user_auth:register' %}">Register</a></li>
+                        <li><a href="{% url 'user_auth:login' %}">Login</a></li>
+                    {% endif %}
+                
+            
+            </ul>
+            </div>
+        
+        </div>
+        <hr/>
+    </nav>
+
+    <div class="container">
+        <div class="sec">
+            <h2 class="welcome">Artists </h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+               
+                <img src="/static/images/sthuthukile.jpg" alt="Malungelo" class="artists-sec ">
+
+            </div>
+
+            <div class="col-sm-3">
+               <h3>S'22KILE</h3>
+                <p>
+                    S'thuthukile Babalwa  Langa known by her stage name "S'22KILE" born August 17, 2000 is a South African Mussician
+                    ,Performer and songwriter. Born and raised in the township KwaNoshezi Pietermaritzburg KwaZulu-Natal.  She released her first single 
+                    featuring Malungelo called Uvalo with Snetech Media , it received a lot of positive reviews from radio and social media platforms. Click here to listen
+                    to "Uvalo" <a href="https://open.spotify.com/track/4dccGlPwp70akVv7W0w8Ep?si=a0d540e1fb4b4dc3" target="_blank" class="spotify">
+                        S'22kile ft Malungelo - Uvalo</a>
+                </p>
+
+            </div>
+
+            <div class="col-sm-3">
+               
+                <img src="/static/images/rayt.png" alt="Malungelo" class="artists-sec ">
+
+            </div>
+
+            <div class="col-sm-3">
+                <h3>RAY T</h3>
+                <p>
+                   Thato Rachel also known by her stage name Ray T, Born and Raised in Tembisa, she began her music career 2015. She released her 
+                   first single with Snetech media titled "Ndabezitha" featuring Malungelo. Her latest single features Sdala B and Malungelo called "Ngiyazifela" which has 
+                   received positive feedback from the listeners. Listen to her latest single: <a href="https://open.spotify.com/track/6I4KXvX8J6qsTaGRjNs6ez?si=cf0bbb6df5b64764" target="_blank" class="spotify">
+                        Ray T ft Sdala B & Malungelo - Ngiyazifela</a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-3">
+               
+                <img src="/static/images/snow.jpeg" alt="Malungelo" class="artists-sec ">
+
+            </div>
+
+            <div class="col-sm-3">
+               <h3>SNOWLESA</h3>
+                <p>
+                    Sinokhle Palesa Mswane,  also known as Snowlesa, Born and Raised in Ladysmith, KZN. She signed with Snetech media in 2023 and released her 
+                    first single with the label called ungangithini?. The song has got air plays from radio stations such as Ukhozi FM and people are showing love for the 
+                    song. Listen to Snowlesa's single:  <a href="https://open.spotify.com/track/7LOqykAN9R8QWniA8WQ7v3?si=36143b1ebaf54f1d" target="_blank" class="spotify">
+                        Snowlesa - Ungangithini?</a>
+                </p>
+
+            </div>
+
+            <div class="col-sm-3">
+               
+                <img src="/static/images/tsimo.png" alt="Malungelo" class="artists-sec ">
+
+            </div>
+
+            <div class="col-sm-3">
+               <h3>TSIMO</h3>
+                <p>
+                    Tsimo, aka Tsimoloho Pearl Lekaota, a singer-songwriter coming straight out of the heart of the Free State. She was was scouted by
+                    Sntech media and she has since released a single with the label called Ngifuna Lo. The song was featured on the top 10 Afro Pop chart on Gagasi FM. Listen to the song on this link:
+                     <a href="https://open.spotify.com/track/2XqZVJVkRB6NHeEsEmOEd9?si=c2d55e0a60a740a1" target="_blank" class="spotify">
+                        Tsimo - Ngifuna Lo</a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-3">
+               
+                <img src="/static/images/bruno.png" alt="Malungelo" class="artists-sec ">
+
+            </div>
+
+            <div class="col-sm-3">
+               <h3>BRUNO MASEMZA</h3>
+                <p>
+                   Paul Brian, also known as Bruno Masemza is the producer for Snetech Media, he has produced songs such as Uvalo, Ngawe, Ngothando and many more along side Malungelo. 
+                   He also has his own single called Ivusa abalele with Themba N Musiq: Listen to the song here:  <a href="https://open.spotify.com/track/16Ag9wTJSEbGX9v6xFSq4K?si=5d2a2980a4844268" target="_blank" class="spotify">
+                    Bruno Masemza, Themba N Musiq - Ivusa Abalele</a>
+                </p>
+
+            </div>
+
+            
+    </div>
+    <div class="row foot">
+        <div class="col-sm-2">
+           
+            <img src="/static/images/logotwo.png" alt="Malungelo" class="logo-btm ">
+
+        </div>
+
+        <div class="col-sm-1">
+            <a href="https://www.instagram.com/snetechmedia/" target="_blank"><img src="/static/images/insta.png" alt="Malungelo" class="logo-btm "></a>
+        </div>
+
+        <div class="col-sm-1">
+            <a href="https://www.tiktok.com/@snetechmedia?is_from_webapp=1&sender_device=pc" target="_blank"><img src="/static/images/tiktok.jpg" alt="Malungelo" class="logo-btm "></a>
+        </div>
+
+        <div class="col-sm-3 text-center">
+            <p class="mail">snetechmedia@gmail.com</p>
+        </div>
+
+</header>
+
+<body>
+    
+</body>
+</html>

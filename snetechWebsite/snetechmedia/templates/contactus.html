@@ -1,0 +1,93 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Contact Us</title>
+</head>
+
+
+<header class="header">
+    <nav class="navbar navbar-style">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a href="{% url 'snetech:home' %}"><img src="/static/images/logoONE.png" alt="Logo" class="logo"></a>
+        </div>
+
+          <div class="collapse navbar-collapse" id="micon">
+           <ul class="nav navbar-nav navbar-right">
+              <li><a href="{% url 'snetech:home' %}">Home</a></li>
+              <li><a href="{% url 'snetech:artists' %}">Our Artists</a></li>
+              <li><a href="{% url 'snetech:gallery' %}">Gallery</a></li>
+              <li><a href="{% url 'snetech:contact' %}">Contact Us</a></li>
+
+              {% if user.is_authenticated %}
+                        <li><a href="{% url 'user_auth:logout' %}">Logout</a></li>
+
+                    {% else %}
+                        <li><a href="{% url 'user_auth:register' %}">Register</a></li>
+                        <li><a href="{% url 'user_auth:login' %}">Login</a></li>
+                    {% endif %}
+                
+            </div>
+        
+        </div>
+        <hr/>
+    </nav>
+
+ <div class="container">
+    <div class="row">
+        <h2 class="welcome">Contact Us </h2>
+    </div>
+     <div class=" row">
+        <p>
+            If you require any assistance please reach us through any of the following channels.
+        </p>
+        <ul >
+            <li class="contact-det">Email: snetechmedia@gmail.com</li>
+            <li class="contact-det">Cell No: 0828879132</li>
+            <li class="contact-det">Instagram: <a href="https://www.instagram.com/snetechmedia/" target="_blank">@snetechmedia</a></li>
+            
+        
+        </ul>
+    </div>
+ </div>
+ <div class="row foot-contact">
+    <div class="col-sm-2">
+       
+        <img src="/static/images/logotwo.png" alt="Malungelo" class="logo-btm ">
+
+    </div>
+
+    <div class="col-sm-1">
+        <a href="https://www.instagram.com/snetechmedia/" target="_blank"><img src="/static/images/insta.png" alt="Malungelo" class="logo-btm "></a>
+    </div>
+
+    <div class="col-sm-1">
+        <a href="https://www.tiktok.com/@snetechmedia?is_from_webapp=1&sender_device=pc" target="_blank"><img src="/static/images/tiktok.jpg" alt="Malungelo" class="logo-btm "></a>
+    </div>
+
+    <div class="col-sm-3 text-center">
+        <p class="mail">snetechmedia@gmail.com</p>
+    </div>
+
+
+</header>

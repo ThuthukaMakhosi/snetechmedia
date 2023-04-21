@@ -1,0 +1,97 @@
+.header{
+    height: 15vh;
+    border-color: black;
+}
+
+.logo{
+    height: 60px;
+    padding-left:  10px;
+}
+
+a{
+    text-decoration: none;    
+}
+
+.icon-bar{
+    background: black;
+}
+
+li a{
+    color: black;
+}
+
+p{
+    text-align: justify;
+    color: rgb(73, 72, 72);
+}
+
+.founder{
+    height: 400px;
+    margin-bottom:20px ;
+    margin-top: 15px;
+}
+
+.founder-info{
+    padding-top: 10px;
+    
+}
+
+.artists{
+    
+    height: 200px;
+    margin-bottom:20px ;
+    margin-top: 15px;
+}
+
+.artists-sec{
+    
+    height: 300px;
+    margin-bottom:20px ;
+    margin-top: 15px;
+}
+
+.spotify{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sec{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.foot{
+    margin-top: 30px;
+    background: black;
+    display: flex;
+}
+
+.logo-btm{
+    
+    height: 25px;
+    padding-left:  10px;
+    align-items: center;
+}
+
+.mail{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+.album{
+    height: 200px;
+    margin: 10px;
+}
+
+.contact-det{
+    padding-bottom: 15px;
+}
+
+.foot-contact{
+    margin-top: 220px;
+    background: black;
+    display: flex;
+}
+

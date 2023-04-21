@@ -1,0 +1,16 @@
+{% extends 'authentication/base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="form-control">
+    <h1>Login</h1>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="Login" />
+    <br>
+    Don't have an account yet? <a href="{% url 'user_auth:register' %}">Register Here</a>
+</form>
+</div>
+{% endblock %}

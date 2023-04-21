@@ -1,0 +1,226 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>SNETECH</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                <a href="{% url 'snetech:home' %}"><img src="{% static 'images/logoONE.png'%}" alt="Logo" class="logo"></a>
+              </div>
+
+                <div class="collapse navbar-collapse" id="micon">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'snetech:home' %}">Home</a></li>
+                    <li><a href="{% url 'snetech:artists' %}">Our Artists</a></li>
+                    <li><a href="{% url 'snetech:gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'snetech:contact' %}">Contact Us</a></li>
+
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'user_auth:logout' %}">Logout</a></li>
+
+                    {% else %}
+                        <li><a href="{% url 'user_auth:register' %}">Register</a></li>
+                        <li><a href="{% url 'user_auth:login' %}">Login</a></li>
+                    {% endif %}
+                
+                </ul>
+                </div>
+            
+            </div>
+            <hr/>
+        </nav>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="welcome">Welcome to Snetech Media </h2>
+        </div>
+        <div class=" row">
+            <div class="col-sm-10">
+            <p>Snetech media is a South African record label founded by Sinethemba Malungelo also known as Malungelo in the music industry.
+                The aim of the record label is to uplift local artists and distribute their music to a big audience. To explore more about SNETECH MEDIA, keep scrolling or the menu options at the top.
+            </p>
+            </div>
+        </div>
+     
+        <div class="row sec">
+            <h2>FOUNDER</h2>
+        </div>
+
+        <div class=" row">
+
+            <div class="col-sm-3">
+                
+                <p class="founder-info">
+                    Malungelo who is a singer, song-writer, producer and business man founded SNETECH media in 2022 and 
+                    has so far signed artists such as Ray T, S'thuthukile Langa a.k.a S'22KILE, Tsimo and other great artists. 
+                    Malungelo has worked with the great artists such as  Mduduzi Ncube, Nolwazi, Dj Cleo, Xowla and many more. He owns various 
+                    businesses and also has a soccer team called the Malungelo team. 
+                </p>
+
+                <p>
+                    Malungelo has released two albums so far, namely Cirle Groove Vol 1 and Circle Groove Vol 2. To get his latest album, click on this link: 
+                    <a href="https://l.instagram.com/?u=https%3A%2F%2Fafricori.to%2Fcirclegroovevol2%3Ffbclid%3DPAAabcoYWFc_4JFM8HHui60LZyb48Xd_8s2JK6ClfASmvWv2updpvAmpjNgMM&e=AT0BY0oLxosvImh19Q9MIX-S2w9G1lfeAu24dDmIzxb9V3D4VAixneIR2NKN_Yy4YobcrJNVPlDZVTvTF0Yhs2y7YlKeK2iO7TuUMug" target="_blank">Cirle Groove Vol 2.</a>
+                    <br>
+                    <img src="/static/images/album.png" alt="Malungelo" class="album ">
+                </p>
+                <p>
+                Follow Malungelo on 
+                <a href="https://www.instagram.com/malungelosir/" target="_blank">Instagram</a>  to get the latest updates.
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                
+                <img src="/static/images/malungeloone.jpg" alt="Malungelo" class="founder ">
+            
+            </div>
+            
+        </div>
+
+        <div class="row sec">
+            <h2>ARTISTS</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-3">
+               
+                <img src="/static/images/sthuthukile.jpg" alt="Malungelo" class="artists-sec ">
+
+            </div>
+
+            <div class="col-sm-5">
+                <p class="founder-info">
+                    SNETECH Media has signed various artists which include  Ray T, S'22KILE, Tsimo, Mini twinz, Snowlesa and our producer Bruno Masemza.
+                    All these artists have released singles which received positive feedback from the fans as well as various radio stations like Metro FM and Ukhozi FM. To find
+                    out more about our artists, follow this link: <a href="{% url 'snetech:artists' %}" >Our Artists</a>.
+                </p>
+            
+            </div>
+            
+        </div>
+
+        <div class="row sec">
+            <h2>LATEST RELEASES</h2>
+        </div>
+
+        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 ">
+
+            <div class="col-sm-3 text-center">
+                
+                <img src="/static/images/Ngothando.jpg" alt="Ngothando" class="artists">
+                <br>
+                <a href="https://open.spotify.com/track/53nLSgIxiE0BZaxbSzZNx0?si=2ed91afed3b34498" target="_blank" class="spotify">
+                    Thato Immacualate - Ngothando ft Malungelo & Ray T</a>
+
+            </div>
+            
+            <div class="col-sm-3 text-center">
+    
+                <img src="/static/images/TSIMO.jpg" alt="Ngifuna Lo" class="artists">
+                <br>
+                <a href="https://open.spotify.com/track/2XqZVJVkRB6NHeEsEmOEd9?si=15a3d6605bd3456a" target="_blank" class="spotify">
+                    Tsimo - Ngifuna Lo</a>
+
+            </div>
+
+            <div class="col-sm-3 text-center">
+                
+                <img src="/static/images/NGIYAZIFELA.jpg" alt="Ngiyazifela" class="artists ">
+                <br>
+                <a href="https://open.spotify.com/track/6I4KXvX8J6qsTaGRjNs6ez?si=79c01ded90ce41b8" target="_blank" class="spotify">
+                    Ray T ft Sdala B & Malungelo - Ngiyazifela</a>
+
+            </div>
+
+            <div class="col-sm-3 text-center">
+                
+                <img src="/static/images/Snowlesa.jpg" alt="Ungangithini" class="artists ">
+                <br>
+                <a href="https://open.spotify.com/track/7LOqykAN9R8QWniA8WQ7v3?si=36143b1ebaf54f1d" target="_blank" class="spotify">
+                    Snowlesa - Ungangithini?</a>
+
+            </div>
+        </div>
+
+        <div class="row sec">
+            <h2>LATEST NEWS</h2>
+        </div>
+
+        <div class="row ">
+
+            <div class="col-sm-10 ">
+                {% for home in new %}  
+                <h3>{{ home.title }}</h3>
+                <br>
+                <p>{{ home.body }}</p>
+                <br>
+                <p>{{ home.signature }}</p>
+                {% endfor %}
+            </div>
+            
+           
+        </div>
+    
+        <div class="row foot">
+            <div class="col-sm-2">
+               
+                <img src="/static/images/logotwo.png" alt="Malungelo" class="logo-btm ">
+
+            </div>
+
+            <div class="col-sm-1">
+                <a href="https://www.instagram.com/snetechmedia/" target="_blank"><img src="/static/images/insta.png" alt="Malungelo" class="logo-btm "></a>
+            </div>
+
+            <div class="col-sm-1">
+                <a href="https://www.tiktok.com/@snetechmedia?is_from_webapp=1&sender_device=pc" target="_blank"><img src="/static/images/tiktok.jpg" alt="Malungelo" class="logo-btm "></a>
+            </div>
+
+            <div class="col-sm-3 text-center">
+                <p class="mail">snetechmedia@gmail.com</p>
+            </div>
+
+            
+
+            
+
+
+        </div>
+    </div>
+    
+    </header>
+
+    
+</body>
+
+   
+
+
+    
+
+</html>
