@@ -8,3 +8,8 @@ path('artists', views.artists, name = 'artists'),
 path('gallery', views.gallery, name = 'gallery'),
 path('contact', views.contact, name = 'contact'),
 ]
+
+"""This defines the links for each html page.
+
+        :rtype: html
+    """
